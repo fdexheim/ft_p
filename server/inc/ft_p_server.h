@@ -6,7 +6,7 @@
 /*   By: fdexheim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/20 09:37:42 by fdexheim          #+#    #+#             */
-/*   Updated: 2019/09/25 11:24:19 by fdexheim         ###   ########.fr       */
+/*   Updated: 2019/11/19 08:49:36 by fdexheim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,7 @@ bool					ft_p_server_access_check_dir(t_client_info *cinfo,
 bool					ft_p_server_access_check_file(t_client_info *cinfo,
 		char *path);
 
+bool			ft_p_server_check_dir_sanity(t_env *env);
 void					ft_p_server_client_loop(t_env *env,
 		t_client_info *cinfo);
 

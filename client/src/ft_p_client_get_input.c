@@ -6,7 +6,7 @@
 /*   By: fdexheim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/14 10:20:16 by fdexheim          #+#    #+#             */
-/*   Updated: 2019/09/18 15:08:52 by fdexheim         ###   ########.fr       */
+/*   Updated: 2019/11/14 10:46:33 by fdexheim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int32_t				ft_p_client_com_get_input(t_ftp_package *com)
 	got = ft_get_full_input();
 	if (got == NULL)
 	{
-		ft_putstr("input error\n");
+		ft_putstr("[input error]\n");
 		return (-1);
 	}
 	ft_p_client_add_input(com, got);

@@ -6,7 +6,7 @@
 /*   By: fdexheim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 16:28:45 by fdexheim          #+#    #+#             */
-/*   Updated: 2019/09/18 15:32:05 by fdexheim         ###   ########.fr       */
+/*   Updated: 2019/11/19 09:25:35 by fdexheim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,9 @@ static int32_t			ft_p_error_handle_extra(t_client_info *cinfo,
 		ft_p_server_add_buffer(cinfo, "Generic write failed\n");
 	else if (err_code == ERR_UNKNOWN_COMMAND)
 		ft_p_server_add_buffer(cinfo, "Unknown command\n");
+	else if (err_code == ERR_MAINDIR_TAMPER)
+		ft_p_server_add_buffer(cinfo, "Main directory has been "
+				"tampered with\n");
 	else
 		ft_p_server_add_buffer(cinfo, "Unknown error\n");
 	return (1);

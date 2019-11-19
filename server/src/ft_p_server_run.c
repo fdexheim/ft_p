@@ -6,7 +6,7 @@
 /*   By: fdexheim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/09 13:44:48 by fdexheim          #+#    #+#             */
-/*   Updated: 2019/09/19 15:04:09 by fdexheim         ###   ########.fr       */
+/*   Updated: 2019/11/19 09:07:11 by fdexheim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,11 @@ void					ft_p_server_run(t_env *env)
 	{
 		signal(SIGQUIT, accept_loop_signal);
 		signal(SIGINT, accept_loop_signal);
+		if (ft_p_server_check_dir_sanity(env) == false)
+		{
+			ft_putstr("[ERROR] - Files directory has been tampered with\n");
+			return ;
+		}
 		cinfo = setup_client_info();
 		if (cinfo == NULL)
 			return ;

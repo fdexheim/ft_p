@@ -6,7 +6,7 @@
 /*   By: fdexheim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 15:26:49 by fdexheim          #+#    #+#             */
-/*   Updated: 2019/09/25 11:19:40 by fdexheim         ###   ########.fr       */
+/*   Updated: 2019/11/19 09:13:44 by fdexheim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@
 # define ERR_LOCAL_READ_FAIL 14
 # define ERR_LOCAL_WRITE_FAIL 15
 # define ERR_EMPTY_LS 16
+# define ERR_MAINDIR_TAMPER 17
 
 typedef struct			s_ftp_package
 {

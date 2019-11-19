@@ -6,7 +6,7 @@
 /*   By: fdexheim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/09 13:49:52 by fdexheim          #+#    #+#             */
-/*   Updated: 2019/09/25 15:39:07 by fdexheim         ###   ########.fr       */
+/*   Updated: 2019/11/19 08:33:04 by fdexheim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,10 @@ int32_t					ft_p_server_receive_com(t_client_info *cinfo)
 	else if (read_ret == 0)
 	{
 		ft_p_server_close_client(cinfo);
+	}
+	else if (read_ret != COM_SIZE)
+	{
+		ft_putstr("[WARNING] size reveived does not match\n");
 	}
 	return (read_ret);
 }
